@@ -10,3 +10,9 @@ Route::get('/', function () {
 
 // Route Barang yang tadi
 Route::get('/barang', [BarangController::class, 'index']);
+
+// Menampilkan Form Tambah
+Route::get('/barang/create', [BarangController::class, 'create']);
+
+// Menyimpan Data (Aksi dari tombol Simpan)
+Route::post('/barang/store', [BarangController::class, 'store']);
