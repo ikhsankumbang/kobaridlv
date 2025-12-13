@@ -23,8 +23,8 @@
                 
                 <ul class="list-unstyled components mb-5">
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li class="active"><a href="{{ url('/customer') }}">Customer</a></li>
-                    <li><a href="{{ url('/barang') }}">Barang</a></li>
+                    <li><a href="{{ url('/customer') }}">Customer</a></li>
+                    <li class="active"><a href="{{ url('/barang') }}"><a href="{{ url('/barang') }}">Barang</a></li>
                     <li><a href="{{ url('/pegawai') }}">Pegawai</a></li>
                     <li><a href="{{ url('/purchase_order') }}">Purchase Order</a></li>
                     <li><a href="{{ url('/surat_jalan') }}">Surat Jalan</a></li>
