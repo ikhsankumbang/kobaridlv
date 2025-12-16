@@ -34,7 +34,7 @@ class InvoiceController extends Controller
             $sj = SuratJalan::with('details.barang')->where('do_no', $do_no)->first();
             if ($sj) {
                 foreach ($sj->details as $detail) {
-                    $subtotal += ($detail->barang->harga ?? 0) * $detail->qty;
+                    $subtotal += ($detail->barang->harga ?? 0) * $detail->qty_pengiriman;
                 }
             }
         }
@@ -77,7 +77,7 @@ class InvoiceController extends Controller
             $sj = SuratJalan::with('details.barang')->where('do_no', $do_no)->first();
             if ($sj) {
                 foreach ($sj->details as $detail) {
-                    $subtotal += ($detail->barang->harga ?? 0) * $detail->qty;
+                    $subtotal += ($detail->barang->harga ?? 0) * $detail->qty_pengiriman;
                 }
             }
         }

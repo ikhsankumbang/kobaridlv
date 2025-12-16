@@ -36,7 +36,6 @@ class PurchaseOrderController extends Controller
             'id_customer'       => $request->id_customer,
             'tanggal'           => $request->tanggal,
             'schedule_delivery' => $request->schedule_delivery,
-            'status'            => 'Pending',
         ]);
 
         return redirect('/purchase-order/detail/' . $request->po_no);

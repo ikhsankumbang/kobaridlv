@@ -580,7 +580,9 @@ div[style*="width: 100%"] {
     border: 1px solid var(--border-glass) !important;
     color: var(--text-primary) !important;
     border-radius: var(--radius-sm) !important;
-    padding: 12px 16px !important;
+    padding: 14px 16px !important;
+    min-height: 48px !important;
+    font-size: 0.95rem !important;
     transition: var(--transition-normal);
 }
 
@@ -696,9 +698,9 @@ textarea.form-control {
     -webkit-backdrop-filter: blur(30px);
     border: 1px solid rgba(220, 53, 69, 0.2);
     border-radius: var(--radius-xl);
-    padding: 3rem;
+    padding: 2.5rem;
     width: 100%;
-    max-width: 420px;
+    max-width: 450px;
     box-shadow:
         0 25px 50px rgba(0, 0, 0, 0.5),
         0 0 100px rgba(220, 53, 69, 0.1);
@@ -707,7 +709,9 @@ textarea.form-control {
 
 .login-card .logo-container {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(220, 53, 69, 0.15);
 }
 
 .login-card .logo-container img {
@@ -728,6 +732,7 @@ textarea.form-control {
 .login-card h2 {
     color: var(--text-primary);
     text-align: center;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
@@ -750,12 +755,15 @@ textarea.form-control {
 }
 
 .login-card .form-control {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     border: 1px solid var(--border-glass);
     color: var(--text-primary);
     border-radius: var(--radius-md);
-    padding: 14px 18px;
+    padding: 14px 16px;
     font-size: 1rem;
+    width: 100%;
+    height: auto;
+    min-height: 48px;
     transition: var(--transition-normal);
 }
 
@@ -807,10 +815,12 @@ textarea.form-control {
 /* Input Icon */
 .input-icon-wrapper {
     position: relative;
+    width: 100%;
 }
 
 .input-icon-wrapper .form-control {
     padding-left: 48px;
+    width: 100%;
 }
 
 .input-icon-wrapper i {
@@ -819,7 +829,8 @@ textarea.form-control {
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: 1rem;
+    z-index: 1;
 }
 
 /* Social Buttons */

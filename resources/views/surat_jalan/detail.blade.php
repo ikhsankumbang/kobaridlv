@@ -41,15 +41,19 @@
         <tr class="table-primary" style="color: black; text-align: center;">
             <th>No</th>
             <th>No Part</th>
-            <th>QTY</th>
+            <th>Nama Barang</th>
+            <th>Qty Pengiriman</th>
+            <th>Keterangan</th>
             <th>Aksi</th>
         </tr>
         @php $index = 1; @endphp
         @foreach($suratJalan->details as $detail)
         <tr>
             <td>{{ $index++ }}</td>
-            <td>{{ $detail->barang->nama_barang ?? $detail->no_part }}</td>
-            <td>{{ number_format($detail->qty, 0, ',', '.') }}</td>
+            <td>{{ $detail->no_part }}</td>
+            <td>{{ $detail->barang->nama_barang ?? '-' }}</td>
+            <td>{{ number_format($detail->qty_pengiriman, 0, ',', '.') }}</td>
+            <td>{{ $detail->keterangan ?? '-' }}</td>
             <td>
                 <a class="btn btn-danger btn-sm" href="{{ url('/surat-jalan/detail/' . $suratJalan->do_no . '/delete/' . $detail->no_part) }}" onclick="return confirm('Yakin hapus?')">Hapus</a>
             </td>

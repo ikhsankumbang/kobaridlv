@@ -34,35 +34,20 @@
                 
                 <div class="form-group">
                     <label for="nama_pegawai">Nama Pegawai</label>
-                    <div class="input-icon-wrapper">
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="nama_pegawai" id="nama_pegawai" class="form-control" placeholder="Masukkan nama pegawai" value="{{ old('nama_pegawai') }}" required autofocus>
-                    </div>
+                    <input type="text" name="nama_pegawai" id="nama_pegawai" class="form-control" placeholder="Masukkan nama pegawai" value="{{ old('nama_pegawai') }}" required autofocus>
                 </div>
                 
                 <div class="form-group">
                     <label for="id_pegawai">ID Pegawai</label>
-                    <div class="input-icon-wrapper">
-                        <i class="fas fa-id-card"></i>
-                        <input type="password" name="id_pegawai" id="id_pegawai" class="form-control" placeholder="Masukkan ID pegawai" required>
-                    </div>
+                    <input type="password" name="id_pegawai" id="id_pegawai" class="form-control" placeholder="Masukkan ID pegawai" required>
                 </div>
                 
                 <button type="submit" class="btn-login">
-                    <i class="fas fa-sign-in-alt"></i> Masuk
+                    Masuk
                 </button>
             </form>
             
             <div class="forgot-link">
-                <p class="divider-text">&mdash; Atau masuk dengan &mdash;</p>
-                <div class="social-buttons">
-                    <a href="#" onclick="alert('Fitur login sosial belum tersedia')" class="social-btn">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" onclick="alert('Fitur login sosial belum tersedia')" class="social-btn">
-                        <i class="fab fa-google"></i>
-                    </a>
-                </div>
                 <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-top: 2rem;">
                     Kobarid Management System &copy; {{ date('Y') }}
                 </p>

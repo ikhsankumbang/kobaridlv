@@ -15,7 +15,8 @@ class SuratJalanDetail extends Model
     protected $fillable = [
         'do_no',
         'no_part',
-        'qty',
+        'qty_pengiriman',
+        'keterangan',
     ];
 
     // Relasi ke SuratJalan
@@ -28,5 +29,11 @@ class SuratJalanDetail extends Model
     public function barang()
     {
         return $this->belongsTo(Barang::class, 'no_part', 'no_part');
+    }
+
+    // Accessor untuk qty (backward compatibility)
+    public function getQtyAttribute()
+    {
+        return $this->qty_pengiriman;
     }
 }
